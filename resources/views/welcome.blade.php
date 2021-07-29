@@ -1,5 +1,13 @@
 @extends('layouts.principal')
 
+@section('styles')
+<style>
+  .row .col-md-4 {
+    margin-bottom: 5em;
+
+  } 
+</style>
+@endsection
 
 @section('content')
 
@@ -44,15 +52,17 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <h3 class="display-3">Productos disponibles</h3>
+            <h3 class="display-3 mb-5">Productos disponibles</h3>
           </div>
         </div>
 
-        <div class="row mt-5">
+        <div class="row ">
           @foreach ($products as $product)
-          <div class="col-md-4">
+          <div class="col-md-4 mb-3">
               
-              <h6 class="info-title text-uppercase text-primary">{{ $product->name }}</h6>              
+              <a href="{{ url('/products/'.$product->id) }}">
+                <h6 class="info-title text-uppercase text-primary">{{ $product->name }}</h6>
+              </a>
               <div class="col-sm-6">
                 <!-- asset('storages').'/'.$product->images()->first()->image 
                   img/storages').'/'.$product->images()->first()->image -->
@@ -69,6 +79,10 @@
               </a>
             </div>
             @endforeach
+          </div>
+          <div class="mx-auto">
+            {{ $products->links() }}
+            
           </div>
         </div>
       </div>

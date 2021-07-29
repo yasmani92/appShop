@@ -4,9 +4,10 @@ Route::get('/', 'TestController@welcome');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/products/{id}', 'ProductController@show'); //mostrar
 
 
-Route::middleware(['auth', 'admin'])->prefix('admin')->group(function (){
+Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group(function (){
 	//CRUD PRODUCTS
 	Route::get('/products', 'ListController@index'); //listar
 	Route::get('/products/create', 'ListController@create'); //crear

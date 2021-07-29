@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 use App\Product;
-use Illuminate\Http\Request;
 
 class ListController extends Controller
 {
@@ -64,14 +66,6 @@ class ListController extends Controller
         $product->delete(); // DELETE
         return back();
     }
-
-
-    public function show($id)
-    {
-       return  Product::find($id);
-       
-    }
-
 
 
 

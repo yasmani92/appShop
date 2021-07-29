@@ -21,7 +21,7 @@
   <!-- CSS Files -->
   <link href="{{ asset('css/argon-design-system.css?v=1.2.2') }}"  rel="stylesheet"/>
 
-
+@yield('styles')
 
 
 </head>
@@ -41,7 +41,7 @@
           <div class="row">
             <div class="col-6 collapse-brand">
               <a href="{{ url('/')}}">
-                <img src="{{ asset('img/brand/blue.png') }}">
+                Appshop
               </a>
             </div>
             <div class="col-6 collapse-close">
