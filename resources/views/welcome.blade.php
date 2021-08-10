@@ -54,9 +54,13 @@
               
               <h6 class="info-title text-uppercase text-primary">{{ $product->name }}</h6>              
               <div class="col-sm-6">
-                <img src="{{ $product->images->first()->image }}" alt="Raised rounded image" class="img-fluid rounded shadow" >
+                <!-- asset('storages').'/'.$product->images()->first()->image 
+                  img/storages').'/'.$product->images()->first()->image -->
+                
+              <img src="{{ $product->featured_image_url }}" alt="Raised rounded-circle image" class="img-fluid rounded-circle shadow" >
               </div>
 
+              <p class="description opacity-8">{{ $product->category ? $product->category->name : 'General' }}</p>
               <p class="description opacity-8">{{ $product->description }}</p>
               <p class="description opacity-8">{{ $product->long_description }}</p>
               <p class="description opacity-8">{{ $product->price }}</p>

@@ -27,6 +27,7 @@ class ListController extends Controller
         $product->description = $request->input('description');
         $product->long_description = $request->input('long_description');
         $product->price = $request->input('price');
+         $product->category_id = $request->input('category_id');
         $product->save(); //CREATE
 
         return redirect('/admin/products');

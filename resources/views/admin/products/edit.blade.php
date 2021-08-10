@@ -8,7 +8,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto text-center">
-            <h3 class="display-3">Editar producto seleccionado</h3>
+            <h3 class="display-3">Editar "{{ $product->name }}"</h3>
           </div>
         </div>
 

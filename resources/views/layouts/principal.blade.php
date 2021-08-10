@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
         @include('com.styles')
     </head>
-    <body>
+    <body class="@yield('body-class')">
 
 <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light py-2">
     <div class="container">
@@ -79,7 +79,7 @@
             <div class="row align-items-center justify-content-center">
               <div class="col-lg-6 text-center">
                 <h1 class="text-white display-1">AppShop</h1>
-                <h2 class="display-4 font-weight-normal text-white">The time is right now!</h2>
+                <h2 class="display-4 font-weight-normal text-white">El momento es ahora!</h2>
                 <div class="btn-wrapper mt-4">
                   <a href="{{ url('login')}}" class="btn btn-warning btn-icon mt-3 mb-sm-0">
               
