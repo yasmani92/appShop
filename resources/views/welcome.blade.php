@@ -74,13 +74,13 @@
               <p class="description opacity-8">{{ $product->description }}</p>
               <p class="description opacity-8">{{ $product->long_description }}</p>
               <p class="description opacity-8">{{ $product->price }}</p>
-              <a href="javascript:;" class="text-primary">More about us
+              <a href="{{ url('/products/'.$product->id) }}" class="text-primary">Ver Producto
                 
               </a>
             </div>
             @endforeach
           </div>
-          <div class="mx-auto">
+          <div class="text-center">
             {{ $products->links() }}
             
           </div>

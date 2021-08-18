@@ -28,7 +28,7 @@
         <div class="col-md-4 mx-auto text-center" >
           <div class="panel panel-default shadow">
             <div class="panel-body">
-              <img src="{{ $image->url }}" class="pt-3" width="250px">
+              <img src="{{ $image->url }}" class="pt-3" width="250px" height="250px">
               <!-- <img src="{{ asset('img/storages').'/'.$image->image}}" class="pt-3"> -->
               <form action="" method="POST">
                 {{ csrf_field() }}

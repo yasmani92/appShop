@@ -13,6 +13,7 @@
         </div>
 
         <div class="row mt-5 mx-auto">
+                
           <div class="col-md-12">
             <form method="POST" action="{{ url('/admin/products') }}">
             {{ csrf_field() }}

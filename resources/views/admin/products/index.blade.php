@@ -12,6 +12,12 @@
 
       <div class="row mt-5">
           <div class="col-sm-4 text-center mx-auto">
+            @if (session('notificacion'))
+                  <div class="alert alert-success" role="alert">
+                      {{ session('notificacion') }}
+                  </div>
+              @endif   
+              
           <a href="{{ url('admin/products/create') }}" type="button" class="btn btn-primary btn-round btn-block btn-default mb-4">Nuevo Producto</a>
           </div>
         <table class="table">

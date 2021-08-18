@@ -33,6 +33,7 @@
           </div>
         </div>
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+
           <li class="nav-item">
            @if (Route::has('login'))
                 <div class="top-right links">
@@ -50,7 +51,7 @@
                         @endif
                     @endauth
                 </div>
-            @endif 
+            @endif             
         </ul>
       </div>
     </div>
